@@ -1,0 +1,13 @@
+<div class="filter">
+    <!-- Buttons that show all, still to do, or done items, on click. -->
+    <div class="btn-wrapper">
+        <button class="btn btn-menu" [class.active]="filter === 'all'"
+            (click)="filter = 'all'; refresh.emit(filter)">All</button>
+
+        <button class="btn btn-menu" [class.active]="filter === 'active'"
+            (click)="filter = 'active'; refresh.emit(filter)">To Do</button>
+
+        <button class="btn btn-menu" [class.active]="filter === 'done'"
+            (click)="filter = 'done'; refresh.emit(filter)">Done</button>
+    </div>
+</div>
